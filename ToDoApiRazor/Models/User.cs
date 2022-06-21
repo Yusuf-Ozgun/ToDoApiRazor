@@ -6,8 +6,7 @@ namespace EenVoudigeToDoApi.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public List<ToDo> ToDos { get; set; }
-        public List<Board> Boards { get; set; }
+        public int BoardId { get; set; }
 
 
         //public User(int id, string name)
