@@ -2,3 +2,51 @@
 @model ToDoApiRazor.Pages.ToDos.UpdateModel
 @{
 }
+<div class="container">
+    <h3>Edit ToDo</h3>
+    <hr />
+    <br />
+    <form method="post">
+        <input asp-for="ToDos.Id" type="hidden" />
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="ToDos.Titel"></label>
+                <input asp-for="ToDos.Titel" class="form-control" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="ToDos.Creatie"></label>
+                <input asp-for="ToDos.Creatie" class="form-control" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="ToDos.LaatsteAanpassing"></label>
+                <input asp-for="ToDos.LaatsteAanpassing" class="form-control" />
+            </div>
+        </div>
+ 
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="ToDos.VervalDatum"></label>
+                <input asp-for="ToDos.VervalDatum" cl class="form-control" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="ToDos.BoardId"></label>
+                <input asp-for="ToDos.BoardId" class="form-control" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="ToDos.ToDoEnum"></label>
+                <input asp-for="ToDos.ToDoEnum" class="form-control" />
+            </div>
+        </div>
+        <br />
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a class="btn btn-default" href="/allcustomer">Cancel</a>
+    </form>
+</div>
