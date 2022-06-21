@@ -1,0 +1,64 @@
+﻿@page
+@using ToDoApiRazor.Models
+@model ToDoApiRazor.Pages.ToDos.CreateModel
+@{
+    ViewData["Title"] = "Add ToDo";
+}
+
+<h1>Add ToDo</h1>
+<div class="mt-5">
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="ToDo.Id" class="form-label">Title</label>
+            <input asp-for="ToDo.Id" class="form-control" />
+            <span asp-validation-for="ToDo.Id" class="text text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ToDo.Titel" class="form-label">Description</label>
+            <textarea asp-for="ToDo.Titel" class="form-control" rows="3" ></textarea>
+            <span asp-validation-for="ToDo.Titel" class="text text-danger"></span>
+        </div>
+                <div class="form-group">
+            <label asp-for="ToDo.Creatie" class="form-label">Description</label>
+            <textarea asp-for="ToDo.Creatie" class="form-control" rows="3" ></textarea>
+            <span asp-validation-for="ToDo.Creatie" class="text text-danger"></span>
+        </div>
+         <div class="form-group">
+            <label asp-for="ToDo.LaatsteAanpassing" class="form-label">Description</label>
+            <textarea asp-for="ToDo.LaatsteAanpassing" class="form-control" rows="3" ></textarea>
+            <span asp-validation-for="ToDo.LaatsteAanpassing" class="text text-danger"></span>
+        </div>
+         <div class="form-group">
+            <label asp-for="ToDo.VervalDatum" class="form-label">Description</label>
+            <textarea asp-for="ToDo.VervalDatum" class="form-control" rows="3" ></textarea>
+            <span asp-validation-for="ToDo.VervalDatum" class="text text-danger"></span>
+        </div>
+                <div class="form-group">
+            <label asp-for="ToDo.BoardId" class="form-label">Description</label>
+            <textarea asp-for="ToDo.BoardId" class="form-control" rows="3" ></textarea>
+            <span asp-validation-for="ToDo.BoardId" class="text text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ToDo.ToDoEnum" class="form-label">Type</label>
+            <select class="form-select" 
+                    asp-for="ToDo.ToDoEnum"
+                    asp-items="Html.GetEnumSelectList<ToDoEnum>()"></select>
+        </div>
+        <button class="wt-20 col-12 btn btn-primary btn-lg">Submit Issue</button>
+    </form>
+</div>
+<div class="mt-5">
+<form method = "post">
+     <div></div>
+    <input type = "text" asp-for="ToDo.Id" placeholder="Id" />
+    <input type = "text" asp-for="ToDo.Titel" placeholder="Titel" />
+    <input type = "text" asp-for="ToDo.Creatie" placeholder="Creatie" />
+    <input type = "text" asp-for="ToDo.LaatsteAanpassing" placeholder="LaatsteAanpassing" />
+    <input type = "text" asp-for="ToDo.VervalDatum" placeholder="VervalDatum" />
+    <input type = "text" asp-for="ToDo.BoardId" placeholder="BoardId" />
+    <input type = "text" asp-for="ToDo.ToDoEnum" placeholder="ToDoEnum" />
+
+
+</form>
+</div>

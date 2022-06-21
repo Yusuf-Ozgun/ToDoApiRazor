@@ -4,7 +4,40 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Yusuf Özgün Razor</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="mt-5">
+    <a asp-page="/ToDos/Create" class="w-20 vtn btn-primary m-2">+ Add New </a>
+
+    @if(Model.ToDos.Count() == 0)
+    {
+        <p>No data to display</p>
+    }
+    else
+    {
+        <div class="row g-0">
+            @foreach (var issue in Model.ToDos)
+            {
+                <div class="card col-3 m-2">
+                    <div class="card-header">
+                        @todo.ToDoEnum
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-truncate">
+                            <a asp-page="/ToDos/Read" asp-route-id="@todo.Id" class="link-dark text-decoration-none" >@todo.Titel</a>
+                        </h5>
+                        <span class="@todo.ToDoEnum.ToCssClass()">@todo.ToDoEnum</span>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <small>@todo.Creatie.Humanize(utcDate:false)</small>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    @foreach (var obj in Model.Boards)
+    {
+        <h1> @obj.Name; </h1>
+
+    }
+    
 </div>
+

@@ -21,5 +21,6 @@ namespace ToDoApiRazor.Pages
         {
             Boards = _ctx.Boards.Include(b => b.ToDos).ToList();
         }
+        public IEnumerable<ToDo> ToDos { get; set; } = Enumerable.Empty<ToDo>(); 
     }
 }
