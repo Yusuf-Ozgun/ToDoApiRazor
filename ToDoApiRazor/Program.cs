@@ -1,5 +1,12 @@
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.EntityFrameworkCore;
+using ToDoApiRazor.Data;
 
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<DataContext>(options =>
+{
+    var s = builder.Configuration.GetConnectionString("TodoContext");
+    options.UseSqlite(s);
+});
 // Add services to the container.
 builder.Services.AddRazorPages();
 
