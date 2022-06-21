@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
 
 namespace EenVoudigeToDoApi.Models
 {
@@ -8,6 +9,7 @@ namespace EenVoudigeToDoApi.Models
         public string Name { get; set; }
         public List<ToDo> ToDos { get; set; }
 
+        public List<User> Users = new();
 
         //public Board(int id, string name)
         //{
