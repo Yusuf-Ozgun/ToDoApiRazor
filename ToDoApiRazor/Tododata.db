@@ -1,0 +1,6 @@
+﻿namespace ToDoApiRazor
+{
+    public class Tododata
+    {
+    }
+}
