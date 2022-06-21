@@ -1,17 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EenVoudigeToDoApi.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Collections.Generic;
+using ToDoApiRazor.Data;
 
 namespace ToDoApiRazor.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
-
+        private readonly DataContext _ctx;
+        public IEnumerable<Board> Boards { get; set; }
         public void OnGet()
         {
 
