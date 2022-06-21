@@ -1,7 +1,9 @@
 ﻿using EenVoudigeToDoApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using ToDoApiRazor.Data;
 
 namespace ToDoApiRazor.Pages
@@ -17,7 +19,7 @@ namespace ToDoApiRazor.Pages
         }
         public void OnGet()
         {
-
+            Boards = _ctx.Boards.Include(b => b.ToDos).ToList();
         }
     }
 }
