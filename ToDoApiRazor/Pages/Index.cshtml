@@ -24,10 +24,10 @@
                         <h5 class="card-title text-truncate">
                             <a asp-page="/ToDos/Read" asp-route-id="@todo.Id" class="link-dark text-decoration-none" >@todo.Titel</a>
                         </h5>
-                        <span class="@todo.ToDoEnum.ToCssClass()">@todo.ToDoEnum</span>
+                        <span class="@todo.ToDoEnum">@todo.ToDoEnum</span>
                     </div>
                     <div class="card-footer text-muted">
-                        <small>@todo.Creatie.Humanize(utcDate:false)</small>
+                        <small>@todo.Creatie</small>
                     </div>
                 </div>
             }

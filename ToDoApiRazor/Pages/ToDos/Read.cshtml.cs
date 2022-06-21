@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ToDoApiRazor.Data;
+using ToDoApiRazor.Models;
+
 
 namespace ToDoApiRazor.Pages.ToDos
 {
