@@ -10,6 +10,11 @@ namespace ToDoApiRazor.Pages
     {
         private readonly DataContext _ctx;
         public IEnumerable<Board> Boards { get; set; }
+        public IndexModel(DataContext ctx)
+        {
+            _ctx = ctx;
+
+        }
         public void OnGet()
         {
 
